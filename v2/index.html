@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#010413">
+  <meta name="description" content="Follow the Lattice emblem from one company to an index in an interactive study for first-time investors in India.">
+  <title>Lattice V2 | From one to many</title>
+  <link rel="icon" href="./media/emblem-mark.webp" type="image/webp">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#story">Skip to the story</a>
+  <header class="header">
+    <a class="brand" href="#emblem" aria-label="Lattice, back to the opening">
+      <img class="brand__mark" src="./media/emblem-mark.webp" alt="" width="360" height="136">
+      <img class="brand__word" src="/media/wordmark.webp" alt="Lattice" width="180" height="22">
+    </a>
+    <a class="compare" href="%BASE_URL%"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M16 10H4m5 5-5-5 5-5"/></svg> Version picker</a>
+  </header>
+
+  <main id="story">
+    <div class="track" data-track>
+      <div class="stage" data-stage>
+        <div class="world" aria-hidden="true">
+          <div class="world__backdrop"></div>
+          <canvas class="world__canvas" data-canvas></canvas>
+          <div class="world__shade"></div>
+        </div>
+        <span class="company-label" data-company-label aria-hidden="true">A</span>
+        <nav class="chapters" aria-label="Story chapters">
+          <a href="#emblem" aria-current="location"><span>01</span><span>The emblem</span></a>
+          <a href="#crossing"><span>02</span><span>One company</span></a>
+          <a href="#index"><span>03</span><span>The index</span></a>
+        </nav>
+
+        <section class="chapter chapter--hero" id="emblem" aria-labelledby="emblem-title" data-chapter>
+          <div class="emblem-poster" aria-hidden="true"><img src="./media/emblem-poster.webp" alt="" width="1280" height="482" fetchpriority="high"></div>
+          <div class="chapter__body hero">
+            <div>
+              <p class="chapter__label">Lattice index study</p>
+              <h1 id="emblem-title">From one<br>to many<span>.</span></h1>
+            </div>
+            <div class="hero__aside">
+              <p>An index-fund-only AMC concept for India’s first-time investors.</p>
+              <a class="action" href="#crossing">Follow the emblem <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 4v12m-5-5 5 5 5-5"/></svg></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="chapter chapter--crossing" id="crossing" aria-labelledby="crossing-title" data-chapter>
+          <div class="crossing-poster" aria-hidden="true"></div>
+          <div class="chapter__body crossing">
+            <p class="chapter__label">One company</p>
+            <h2 id="crossing-title">Start with<br>one share<span>.</span></h2>
+            <p>A share gives you a small stake in one company. Zoom out and you can see how it moves alongside others.</p>
+            <a class="action action--quiet" href="#index">See them together <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 4v12m-5-5 5 5 5-5"/></svg></a>
+          </div>
+        </section>
+
+        <section class="chapter chapter--index" id="index" aria-labelledby="index-title" data-chapter data-lab>
+          <div class="benchmark-poster" aria-hidden="true">
+            <div class="benchmark-poster__bars" data-bars>
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <span>Seven fictional companies</span>
+          </div>
+          <div class="chapter__body index">
+            <div class="index__copy">
+              <p class="chapter__label">The index</p>
+              <h2 id="index-title">Many companies.<br>One index<span>.</span></h2>
+              <p>An index measures how a group moves. Its rules decide how much each company counts.</p>
+            </div>
+            <div class="lab">
+              <div class="lab__head">
+                <h3>Index Lab</h3>
+                <span>Fictional example</span>
+              </div>
+              <div class="lab__inputs">
+                <fieldset disabled>
+                  <legend>Weighting</legend>
+                  <div class="options">
+                    <label><input type="radio" name="weight" value="equal" checked><span>Equal</span></label>
+                    <label><input type="radio" name="weight" value="size"><span>By size</span></label>
+                  </div>
+                </fieldset>
+                <fieldset disabled>
+                  <legend>Move Company A</legend>
+                  <div class="options">
+                    <label><input type="radio" name="move" value="-1"><span>−10%</span></label>
+                    <label><input type="radio" name="move" value="0" checked><span>0%</span></label>
+                    <label><input type="radio" name="move" value="1"><span>+10%</span></label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="lab__result" role="status" aria-atomic="true">
+                <span>Index move <strong data-result>0.00%</strong></span>
+                <span data-share>Company A weight 14.3%</span>
+              </div>
+              <noscript><p class="lab__note">The illustration shows equal weights with all companies holding steady.</p></noscript>
+            </div>
+          </div>
+        </section>
+        <div class="progress" aria-hidden="true"><span data-progress></span></div>
+      </div>
+    </div>
+
+    <section class="coda" aria-labelledby="coda-title">
+      <div class="coda__inner">
+        <h2 id="coda-title">What does the<br>fund follow<span>?</span></h2>
+        <div>
+          <p>An index fund aims to track a chosen index. The fund can lose value when its investments fall, and its return can differ from the index it tracks.</p>
+          <a class="action action--quiet" href="#emblem">Replay the journey <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 16V4m-5 5 5-5 5 5"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <img src="./media/emblem-mark.webp" alt="Lattice emblem" width="360" height="136" loading="lazy">
+    <p>Lattice is a design study. No schemes are offered here. Mutual fund investments are subject to market risk.</p>
+    <a href="https://investor.sebi.gov.in/index_mutual_fund.html">SEBI’s index fund guide <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M6 14 14 6M7 6h7v7"/></svg></a>
+  </footer>
+</body>
+</html>

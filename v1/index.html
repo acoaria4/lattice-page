@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lattice is a design study for an index-fund-only asset manager in India. Explore how an index is put together and what an index fund follows.">
+  <meta name="theme-color" content="#080f0c">
+  <title>Lattice | See the bigger picture</title>
+  <link rel="icon" type="image/svg+xml" href="/media/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    if (matchMedia("(prefers-reduced-motion: no-preference) and (min-height: 541px)").matches) {
+      const root = document.documentElement;
+      root.classList.add("has-cinema");
+      window.addEventListener("error", (event) => {
+        if (event.target instanceof HTMLScriptElement && event.target.type === "module") {
+          root.classList.remove("has-cinema");
+        }
+      }, true);
+    }
+  </script>
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow-diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M7 6h11v11"/></symbol>
+    <symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6"/></symbol>
+    <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M12 20V5m-6 6 6-6 6 6"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+  </svg>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="%BASE_URL%" aria-label="Lattice version picker">
+        <img src="/media/wordmark.webp" alt="Lattice" width="180" height="22">
+      </a>
+      <details class="mobile-nav" data-menu>
+        <summary aria-controls="mobile-links"><span>Menu</span><i aria-hidden="true"></i></summary>
+        <nav id="mobile-links" aria-label="Mobile navigation">
+          <a href="#index">How indexing works</a>
+          <a href="#market">The Indian market</a>
+          <a href="#lab">Index Lab</a>
+          <a href="#faq">Questions</a>
+          <a href="%BASE_URL%">Version picker</a>
+        </nav>
+      </details>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#index">How it works</a>
+        <a href="#market">The market</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <a class="button button--outline header-action" href="#lab">Open Index Lab <svg class="icon" aria-hidden="true"><use href="#arrow-diagonal"></use></svg></a>
+    </div>
+  </header>
+
+  <nav class="chapter-rail" aria-label="Chapters" data-chapters>
+    <a href="#top" aria-label="Introduction" aria-current="location"><span></span></a>
+    <a href="#index" aria-label="How indexing works"><span></span></a>
+    <a href="#market" aria-label="The Indian market"><span></span></a>
+    <a href="#lab" aria-label="Index Lab"><span></span></a>
+    <a href="#faq" aria-label="Questions"><span></span></a>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <picture class="hero__art" aria-hidden="true">
+        <source media="(max-width: 620px)" srcset="/media/hero-mobile.webp">
+        <img src="/media/hero.webp" width="1672" height="941" alt="" fetchpriority="high">
+      </picture>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="shell hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__title" id="hero-title"><span class="hero__line"><span>See the</span></span><span class="hero__line"><span>bigger picture<span class="accent">.</span></span></span></h1>
+          <p>Index funds, made easier to understand.<br class="desktop-break"> For first-time investors in India.</p>
+          <a class="button button--lime" href="#index">Explore indexing <svg class="icon" aria-hidden="true"><use href="#arrow-down"></use></svg></a>
+        </div>
+        <div class="hero__foot">
+          <a class="scroll-link" href="#index"><span class="scroll-link__icon"><svg class="icon" aria-hidden="true"><use href="#arrow-down"></use></svg></span> Scroll to explore</a>
+          <p>An index-fund-only AMC concept</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mechanism" id="index" aria-labelledby="index-title">
+      <div class="mechanism__stage">
+        <div class="shell mechanism__inner">
+          <div class="mechanism__text">
+            <div class="mechanism__copy" data-mechanism-first>
+              <h2 id="index-title">Start with one.</h2>
+              <p>A share gives you a small stake in a company. Its price tells you how that one company is trading.</p>
+            </div>
+            <div class="mechanism__copy" data-mechanism-last>
+              <h2>See them together.</h2>
+              <p>An index measures how a group of companies moves. Its rules decide which ones are included and how much each counts.</p>
+            </div>
+          </div>
+          <figure class="mechanism__visual" aria-hidden="true">
+            <img class="mechanism__poster" src="/media/close.webp" alt="" loading="lazy" decoding="async" width="1448" height="1086">
+            <canvas data-index-canvas></canvas>
+            <span class="viewfinder viewfinder--tl"></span><span class="viewfinder viewfinder--tr"></span>
+            <span class="viewfinder viewfinder--bl"></span><span class="viewfinder viewfinder--br"></span>
+          </figure>
+          <div class="mechanism__foot" aria-hidden="true"><span>Company</span><span class="mechanism__track"><span></span></span><span>Index</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="market" id="market" aria-labelledby="market-title">
+      <div class="market__pin">
+        <div class="market__frame" data-market-frame>
+          <img class="market__art" src="/media/city.webp" width="1672" height="941" alt="" loading="lazy" decoding="async">
+          <div class="market__shade" aria-hidden="true"></div>
+          <div class="shell market__inner">
+            <div class="market__copy" data-market-copy>
+              <h2 id="market-title">Behind every index,<br> a real economy.</h2>
+              <p>From banks to tech firms, an equity index brings a part of India’s listed economy into view. An index fund aims to follow that index as it rises or falls.</p>
+            </div>
+            <a class="button button--outline market__action" href="#lab">Try an example <svg class="icon" aria-hidden="true"><use href="#arrow-diagonal"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab" id="lab" aria-labelledby="lab-title" data-lab data-direction="up" data-rule="equal">
+      <div class="shell lab__inner">
+        <div class="lab__header">
+          <h2 id="lab-title">Index Lab.</h2>
+          <p>Give four fictional companies a weight. Move one of them and see how the index responds.</p>
+        </div>
+        <div class="lab__layout">
+          <div class="lab__controls">
+            <fieldset disabled>
+              <legend>Choose a weighting rule</legend>
+              <div class="options">
+                <label><input type="radio" name="weight" value="equal" checked><span>Equal weight</span></label>
+                <label><input type="radio" name="weight" value="size"><span>Size weighted</span></label>
+              </div>
+            </fieldset>
+            <fieldset disabled>
+              <legend>Move Company A</legend>
+              <div class="options options--move">
+                <label><input type="radio" name="move" value="down"><span>−10%</span></label>
+                <label><input type="radio" name="move" value="flat"><span>0%</span></label>
+                <label><input type="radio" name="move" value="up" checked><span>+10%</span></label>
+              </div>
+            </fieldset>
+            <noscript><p>The graphic shows the default example. Enable JavaScript to change the weights and company move.</p></noscript>
+          </div>
+          <div class="lab__board" data-lab-visual>
+            <div class="lab__board-head">
+              <span>Illustrative index</span>
+              <span>Company weight</span>
+            </div>
+            <div class="lab__companies">
+              <div class="company company--active" data-company><span class="company__name"><span class="sr-only">Company </span>A</span><span class="company__weight" data-weight>25%</span></div>
+              <div class="company" data-company><span class="company__name"><span class="sr-only">Company </span>B</span><span class="company__weight" data-weight>25%</span></div>
+              <div class="company" data-company><span class="company__name"><span class="sr-only">Company </span>C</span><span class="company__weight" data-weight>25%</span></div>
+              <div class="company" data-company><span class="company__name"><span class="sr-only">Company </span>D</span><span class="company__weight" data-weight>25%</span></div>
+            </div>
+            <div class="lab__result" role="status" aria-atomic="true">
+              <div><span class="lab__result-label">Index move</span><span class="lab__value" data-result>+2.5%</span></div>
+              <p data-result-detail>Company A rose 10%. The other three held steady.</p>
+            </div>
+          </div>
+        </div>
+        <p class="lab__note">A fictional example. Real index funds can lose value, and fund returns can differ from the index they track.</p>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="shell faq__inner">
+        <div>
+          <h2 id="faq-title">Good<br> questions.</h2>
+          <p>Start with the basics.</p>
+        </div>
+        <div class="faq__list">
+          <details>
+            <summary>What is an index fund? <svg class="icon" aria-hidden="true"><use href="#plus"></use></svg></summary>
+            <p>It’s a mutual fund that aims to follow a specific market index. It typically holds the investments in that index in similar proportions.</p>
+          </details>
+          <details>
+            <summary>What’s an example of an Indian index? <svg class="icon" aria-hidden="true"><use href="#plus"></use></svg></summary>
+            <p>The Nifty 50 tracks 50 stocks listed on India’s National Stock Exchange. The Nifty 500 tracks a broader group of 500 companies.</p>
+          </details>
+          <details>
+            <summary>Can an index fund lose value? <svg class="icon" aria-hidden="true"><use href="#plus"></use></svg></summary>
+            <p>Yes. If the investments it holds fall in value, the fund can fall too. Holding a group of investments still leaves you exposed to market risk.</p>
+          </details>
+          <details>
+            <summary>Why might a fund differ from its index? <svg class="icon" aria-hidden="true"><use href="#plus"></use></svg></summary>
+            <p>Expenses and differences in how the fund buys, sells, and holds investments can affect how closely it follows its benchmark.</p>
+          </details>
+          <p class="faq__sources"><a href="https://investor.sebi.gov.in/index_mutual_fund.html">SEBI’s index fund guide <svg class="icon" aria-hidden="true"><use href="#arrow-diagonal"></use></svg></a><a href="https://www.niftyindices.com/indices/equity/broad-based-indices/nifty--50">Nifty index information <svg class="icon" aria-hidden="true"><use href="#arrow-diagonal"></use></svg></a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <img src="/media/horizon.webp" alt="" loading="lazy" decoding="async" width="1672" height="941">
+      <div class="shell closing__inner">
+        <h2 id="closing-title">Keep the bigger<br> picture in view<span class="accent">.</span></h2>
+        <a class="button button--lime" href="#top">Back to the beginning <svg class="icon" aria-hidden="true"><use href="#arrow-up"></use></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <a class="brand" href="#top" aria-label="Lattice home"><img src="/media/wordmark.webp" alt="Lattice" width="180" height="22"></a>
+      <p>Lattice is a design study for an index-fund-only asset management company. No schemes are offered here. Mutual fund investments are subject to market risk.</p>
+    </div>
+  </footer>
+</body>
+</html>

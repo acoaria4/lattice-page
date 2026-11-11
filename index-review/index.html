@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060a12">
+  <meta name="description" content="Open a fictional index with Lattice and follow the moment one company leaves and another takes its place.">
+  <title>Inside the index | Lattice</title>
+  <link rel="icon" href="../v2/media/emblem-mark.webp" type="image/webp">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <header class="site-head">
+    <a class="brand" href="#emblem" aria-label="Lattice, back to the emblem">
+      <img class="brand__mark" src="../v2/media/emblem-mark.webp" width="360" height="136" alt="">
+      <img class="brand__type" src="/media/wordmark.webp" width="180" height="22" alt="Lattice">
+    </a>
+    <a class="study-link" href="%BASE_URL%">Version picker <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="journey" data-journey>
+    <div class="stage" data-stage>
+      <div class="stage-art" aria-hidden="true">
+        <div class="stage-art__backdrop"></div>
+        <canvas data-story-canvas></canvas>
+        <div class="stage-art__shade"></div>
+      </div>
+
+      <nav class="chapter-rail" data-chapter-rail aria-label="Study chapters">
+        <a href="#emblem" aria-current="location"><span>Emblem</span><i aria-hidden="true"></i></a>
+        <a href="#holdings"><span>Holdings</span><i aria-hidden="true"></i></a>
+        <a href="#review"><span>Review</span><i aria-hidden="true"></i></a>
+        <a href="#after"><span>After</span><i aria-hidden="true"></i></a>
+      </nav>
+      <details class="chapter-menu" data-chapter-menu>
+        <summary><span data-chapter-name>Emblem</span><span class="chapter-menu__position" data-chapter-position>1 of 4</span></summary>
+        <nav aria-label="Study chapters">
+          <a href="#emblem" aria-current="location">Emblem</a>
+          <a href="#holdings">Holdings</a>
+          <a href="#review">Review</a>
+          <a href="#after">After</a>
+        </nav>
+      </details>
+
+      <section id="emblem" class="beat beat--emblem" data-beat aria-labelledby="emblem-title">
+        <figure class="emblem-poster" aria-hidden="true">
+          <img src="../v2/media/emblem-poster.webp" width="1280" height="482" alt="" fetchpriority="high">
+        </figure>
+        <div class="beat__copy">
+          <p class="eyebrow">Lattice index study</p>
+          <h1 id="emblem-title">See what your<br>money follows<span>.</span></h1>
+          <p class="beat__summary">One index name can hold a changing mix of companies. Look inside a fictional example and see what happens on review day.</p>
+          <a class="action action--primary" href="#holdings">Open the index <span aria-hidden="true">↓</span></a>
+        </div>
+        <dl class="emblem-ledger" aria-label="Current illustrative holdings">
+          <div><dt>Index</dt><dd>Lattice Seven</dd></div>
+          <div><dt>Retail holding</dt><dd data-current-name>Kestrel Retail</dd></div>
+        </dl>
+      </section>
+
+      <section id="holdings" class="beat beat--holdings" data-beat aria-labelledby="holdings-title">
+        <div class="beat__copy">
+          <p class="eyebrow">Before the review · <time datetime="2026-09-17" data-before-date>17 Sep 2026</time></p>
+          <h2 id="holdings-title">Inside <span>₹100.</span></h2>
+          <p class="beat__summary">Here’s how ₹100 of exposure is split across seven companies in the illustrative index. The larger the holding, the wider its strip.</p>
+          <div class="allocation-strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="holdings" role="group" aria-label="Explore exposure by sector">
+            <button type="button" data-holding-index="0" aria-pressed="true" disabled>Banking <strong>₹24</strong></button>
+            <button type="button" data-holding-index="1" aria-pressed="false" disabled>Software <strong>₹20</strong></button>
+            <button type="button" data-holding-index="2" aria-pressed="false" disabled>Industrials <strong>₹17</strong></button>
+            <button type="button" data-holding-index="3" aria-pressed="false" disabled>Healthcare <strong>₹13</strong></button>
+            <button type="button" data-holding-index="4" aria-pressed="false" disabled>Energy <strong>₹11</strong></button>
+            <button type="button" data-holding-index="5" aria-pressed="false" disabled>Telecom <strong>₹9</strong></button>
+            <button type="button" data-holding-index="6" aria-pressed="false" disabled>Retail <strong>₹6</strong></button>
+          </div>
+          <p class="holding-detail" data-holding-detail aria-live="polite">Banking accounts for ₹24 of every ₹100 in this example.</p>
+          <a class="action" href="#review">See what changes <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section id="review" class="beat beat--review" data-beat aria-labelledby="review-title">
+        <div class="beat__copy">
+          <p class="eyebrow eyebrow--review"><time datetime="2026-09-18" data-review-date>18 Sep 2026</time><span data-review-status>Review day</span></p>
+          <h2 id="review-title">One leaves.<br><span>One enters.</span></h2>
+          <p class="beat__summary">The example index keeps the seven largest eligible companies by market value at each review.</p>
+          <dl class="exchange-ledger">
+            <div class="exchange-ledger__out">
+              <dt><span aria-hidden="true">↖</span> Leaves · Rank 8</dt>
+              <dd data-outgoing-name>Kestrel Retail</dd>
+            </div>
+            <div class="exchange-ledger__in">
+              <dt><span aria-hidden="true">↘</span> Enters · Rank 7</dt>
+              <dd data-incoming-name>Aster Retail</dd>
+            </div>
+          </dl>
+          <a class="action" href="#after">See the new mix <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section id="after" class="beat beat--after" data-beat aria-labelledby="after-title">
+        <div class="beat__copy">
+          <p class="eyebrow">After the review · <time datetime="2026-09-18" data-review-date>18 Sep 2026</time></p>
+          <h2 id="after-title">Same index.<br><span>A new mix.</span></h2>
+          <p class="beat__summary"><strong data-after-holding-name>Aster Retail</strong> now makes up the retail holding. The other six companies carry through this review.</p>
+          <details class="record">
+            <summary>Review record <span aria-hidden="true"></span></summary>
+            <dl class="record__body">
+              <div><dt>Effective date</dt><dd><time datetime="2026-09-18" data-review-date>18 Sep 2026</time></dd></div>
+              <div><dt>Added · Rank 7</dt><dd class="record__in" data-incoming-name>Aster Retail</dd></div>
+              <div><dt>Removed · Rank 8</dt><dd class="record__out" data-outgoing-name>Kestrel Retail</dd></div>
+              <div><dt>Rule</dt><dd>Keep the seven largest eligible companies by market value.</dd></div>
+              <div><dt>Scenario</dt><dd>Fictional companies and weights</dd></div>
+            </dl>
+          </details>
+          <a class="action" href="#emblem" data-next-lap>Return to the emblem <span aria-hidden="true">↻</span></a>
+        </div>
+      </section>
+
+      <div class="projection projection--out" data-outgoing-label hidden aria-hidden="true">
+        <span>Leaving</span><strong data-outgoing-name>Kestrel Retail</strong>
+      </div>
+      <div class="projection projection--in" data-incoming-label hidden aria-hidden="true">
+        <span>Joining</span><strong data-incoming-name>Aster Retail</strong>
+      </div>
+      <p class="return-note" data-return-note hidden><strong data-after-holding-name>Aster Retail</strong> is now part of the same index.</p>
+    </div>
+  </main>
+  <footer class="site-foot">
+    <img src="/media/wordmark.webp" width="180" height="22" alt="Lattice">
+    <p>Illustrative index with fictional companies and weights.</p>
+  </footer>
+</body>
+</html>

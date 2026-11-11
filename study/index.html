@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050a13">
+  <meta name="description" content="Trace one company’s move through a fictional index in this Lattice interaction study.">
+  <title>Trace the move | Lattice</title>
+  <link rel="icon" href="../v2/media/emblem-mark.webp" type="image/webp">
+  <link rel="stylesheet" href="./study.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <header class="site-head">
+    <a class="brand" href="#emblem" aria-label="Lattice, back to the emblem">
+      <img class="brand__mark" src="../v2/media/emblem-mark.webp" width="360" height="136" alt="">
+      <img class="brand__type" src="/media/wordmark.webp" width="180" height="22" alt="Lattice">
+    </a>
+    <a class="picker-link" href="%BASE_URL%">Version picker <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="study">
+    <div class="journey" data-journey>
+      <div class="stage" data-stage>
+        <div class="stage-art" aria-hidden="true">
+          <div class="stage-art__backdrop"></div>
+          <canvas data-story-canvas></canvas>
+          <div class="stage-art__shade"></div>
+        </div>
+        <div class="company-hint" data-company-hint hidden aria-hidden="true"></div>
+
+        <nav class="chapter-rail" aria-label="Story chapters" data-chapter-rail>
+          <a href="#emblem" aria-current="location"><span>Emblem</span><i aria-hidden="true"></i></a>
+          <a href="#company"><span>Company</span><i aria-hidden="true"></i></a>
+          <a href="#weights"><span>Weights</span><i aria-hidden="true"></i></a>
+          <a href="#result"><span>Result</span><i aria-hidden="true"></i></a>
+        </nav>
+        <details class="chapter-menu" data-chapter-menu>
+          <summary><span data-chapter-name>Emblem</span><span class="chapter-menu__position" data-chapter-position>1 of 4</span></summary>
+          <nav aria-label="Story chapters">
+            <a href="#emblem" aria-current="location">Emblem</a>
+            <a href="#company">Company</a>
+            <a href="#weights">Weights</a>
+            <a href="#result">Result</a>
+          </nav>
+        </details>
+
+        <section class="beat beat--emblem" id="emblem" data-beat aria-labelledby="emblem-title">
+          <div class="beat-poster emblem-poster" aria-hidden="true"><img src="../v2/media/emblem-poster.webp" width="1280" height="482" alt="" fetchpriority="high"></div>
+          <div class="beat__copy">
+            <h1 id="emblem-title">What moves<br>an index<span>?</span></h1>
+            <p>Follow one company’s price move all the way into a fictional index.</p>
+            <a class="action action--light" href="#company">Follow the move <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="beat beat--company" id="company" data-beat aria-labelledby="company-title">
+          <div class="beat-poster emblem-poster emblem-poster--close" aria-hidden="true"><img src="../v2/media/emblem-poster.webp" width="1280" height="482" alt=""></div>
+          <div class="beat__copy">
+            <div class="overline"><span></span> Company A</div>
+            <h2 id="company-title">One company<br>falls <span>10%.</span></h2>
+            <p>The other six hold steady. What happens to the index depends on how much Company A counts.</p>
+            <a class="action" href="#weights">Compare weights <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="beat beat--weights" id="weights" data-beat aria-labelledby="weights-title">
+          <div class="beat-poster lab-poster lab-poster--weights" aria-hidden="true"></div>
+          <div class="beat__copy">
+            <h2 id="weights-title">How much<br>does A count<span>?</span></h2>
+            <p>Company A falls 10% in both examples. Choose a weight and watch its ribbon change.</p>
+            <fieldset class="weight-choices" data-weight-choices disabled>
+              <legend>Company A’s weight</legend>
+              <label>
+                <input type="radio" name="weight" value="equal">
+                <span class="weight-choice">
+                  <span>Equal weights</span><strong>−1.43%</strong><small>A counts for 1/7</small>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="weight" value="size" checked>
+                <span class="weight-choice">
+                  <span>Size weighted</span><strong>−2.50%</strong><small>A counts for 1/4</small>
+                </span>
+              </label>
+            </fieldset>
+            <a class="action" href="#result">See the result <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="beat beat--result" id="result" data-beat aria-labelledby="result-title">
+          <div class="beat-poster lab-poster" aria-hidden="true"></div>
+          <div class="beat__copy" data-result-copy>
+            <div class="overline"><span></span> Fictional index move</div>
+            <h2 id="result-title" class="result-value" data-result-value>−2.50%</h2>
+            <p data-result-summary>Company A fell 10% and counted for a quarter of the index.</p>
+            <button type="button" class="action action--green trace-button" data-trace-button aria-expanded="false" aria-controls="company-breakdown" disabled>Trace the move <span aria-hidden="true">↗</span></button>
+            <noscript>
+              <p>Company A contributed −2.50 percentage points. The other six contributed zero.</p>
+            </noscript>
+          </div>
+          <div id="company-breakdown" class="inspector-slot" data-inspector hidden></div>
+        </section>
+        <p class="return-note" data-return-note hidden>An index fund aims to track a specific index. Look at which companies it includes and how much each counts.</p>
+      </div>
+    </div>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="closing__art" aria-hidden="true"><img src="../v2/media/emblem-poster.webp" width="1280" height="482" alt=""></div>
+      <div class="closing__copy">
+        <h2 id="closing-title">Know what you’re<br>following<span>.</span></h2>
+        <p>An index fund aims to track a specific index. Look at which companies it includes and how much each counts.</p>
+        <a class="action" href="#emblem">Replay the study <span aria-hidden="true">↑</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <img src="/media/wordmark.webp" width="180" height="22" alt="Lattice">
+    <span>Illustrative index with fictional companies</span>
+  </footer>
+</body>
+</html>
